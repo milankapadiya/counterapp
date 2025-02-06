@@ -8,6 +8,8 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
+  int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +19,7 @@ class _HomescreenState extends State<Homescreen> {
         title: const Center(child: Text('Myapp')),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: selectedIndex,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
